@@ -1,0 +1,44 @@
+DBCC CHECKIDENT('[NomeDaTabela]', RESEED, 0) -> Resetar Identity de uma tabela
+CTRL + SHIFT + U(Upper)/L(Lower)
+
+SP_GeraCoordenada
+
+Gera um par te coordenadas x e y, a quantidade deve ser definida no GO
+Insere na tabela aux.Coordenada
+
+SP_EliminaCoordenadaDuplicada
+
+Elimina coordenadas duplicadas da tabela aux.Coordenada
+
+SP_PopulaTabelaAldeia
+
+Insere as coordenadas da tabela aux.Coordenada na tabela dbo.Aldeia
+
+SP_CriaJogadorJogavel
+
+Insere um jogador jogável na tabela dbo.Jogador com @nome como parâmetro de entrada
+
+SP_CriaTribo
+
+Insere uma tribo nova na tabela dbo.Tribo com @nome e @tag como parâmetros de entrada
+
+SP_CriaDiplomacia
+
+Cria uma nova diplomacia na tabela dbo.Diplomacia com 
+	"Tribo 1:" @id_tribo_a
+	"Tribo 2:" @id_tribo_b
+	"Tipo de diplomacia:" @id_tipoDiplomacia
+	
+	Se já existir a diplomacia, não faz nada.
+	Se existir outro tipo de diplomacia, deleta a existente e cria outra
+	Se não existir nenhuma diplomacia, cria uma nova.
+
+SP_AldeiaRecebeJogador
+
+Insere ID_Jogador na tabela dbo.Aldeia. Todos os jogadores criados serão inseridos por ordem alfabética na tabela jogador.
+
+Exemplo: Se existem 10 jogadores cadastrados na dbo.Jogador, os 10 ID_Jogador serão inseridos nas últimas 10 posições na dbo.Aldeia
+
+SP_AlteraDonoDaAldeia
+
+Altera o dono de uma aldeia na tabela dbo.Aldeia, onde @id_novo_dono é o ID_Jogador do Jogador que conquistou e @id_aldeia é o ID_Aldeia da aldeia.
