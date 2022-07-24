@@ -12,8 +12,8 @@ CREATE PROCEDURE [dbo].[SP_ZeraColunasJogador]
 AS
 	UPDATE Jogador
 		SET Pontos = 0
-		,ODA = 0
-		,ODD = 0
+		, ODA = 0
+		, ODD = 0
 GO
 
 
