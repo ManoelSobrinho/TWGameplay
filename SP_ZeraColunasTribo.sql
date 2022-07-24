@@ -12,8 +12,9 @@ CREATE PROCEDURE [dbo].[SP_ZeraColunasTribo]
 AS
 	UPDATE Tribo
 		SET Pontos = 0
-		,ODA = 0
-		,ODD = 0
+		, ODA = 0
+		, ODD = 0
+		, Criada = 0
 GO
 
 
